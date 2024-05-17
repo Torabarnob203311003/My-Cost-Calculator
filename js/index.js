@@ -19,17 +19,14 @@ document.getElementById('calculate').addEventListener('click',function(){
 })
 
 
-  document.getElementById('save-button').addEventListener('click',function(){
 
-  const balance = parseFloat(document.getElementById('balance').innerText);
-  const saveparcentage = parseFloat(document.getElementById('save').value);
-  const savingamount = balance*(saveparcentage/100);
-   const totalsaving = document.getElementById('total-saving')
-   totalsaving.innerText = savingamount;
-     
-//   document.getElementById('total-saving').innerText = savingamount;
-//   const remainingbalance = balance-savingamount;
+document.getElementById('save-button').addEventListener('click', () => {
+    const balance = parseFloat(document.getElementById('balance').textContent);
+    const savePercentage = parseFloat(document.getElementById('save').value);
+    const savingAmount = balance * (savePercentage / 100);
+    const remainingBalance = balance - savingAmount;
 
-
-  })
+    document.getElementById('saving-amount').textContent = savingAmount;
+    document.getElementById('remaining-balance').textContent = remainingBalance;
+});
 
