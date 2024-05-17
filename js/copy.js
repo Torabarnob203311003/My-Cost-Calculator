@@ -1,3 +1,6 @@
+
+
+// its the same copy of index .js 
 document.getElementById('calculate').addEventListener('click',function(){
 
 
